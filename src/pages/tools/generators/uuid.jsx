@@ -66,7 +66,7 @@ const createMethods = (state) => ({
   switchKind(kind) {
     const withKindChanged = {
       ...state,
-      kind,
+      kind:kind,
     };
     return { ...withKindChanged, generated: generate(withKindChanged) };
   },

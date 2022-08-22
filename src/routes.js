@@ -9,6 +9,11 @@ export const tools = [
         name: 'UUID / NanoID',
         key: 'uuid',
         component: lazy(() => import('./pages/tools/generators/uuid'))
+      },
+      {
+        name: 'Calculator',
+        key: 'calc',
+        component: lazy(() => import('./pages/tools/generators/calc'))
       }
     ]
   }
