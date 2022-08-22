@@ -59,7 +59,7 @@ export default function calcGegeratorPage() {
     const $TypeSelect = (
         <FormControl>
             <FormLabel>Type</FormLabel>
-            <RadioGroup defaultValue='Itachi' onChange={methods.switchKind}>
+            <RadioGroup defaultValue='plus' onChange={methods.switchKind}>
                 <HStack spacing='24px'>
                     <Radio value='plus'>+</Radio>
                     <Radio value='minus'>-</Radio>
