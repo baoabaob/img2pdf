@@ -14,6 +14,11 @@ export const tools = [
         name: 'Calculator',
         key: 'calc',
         component: lazy(() => import('./pages/tools/generators/calc'))
+      },
+      {
+      name: 'Base64 String Encoder/Decoder',
+        key: 'base64str',
+        component: lazy(() => import('./pages/tools/generators/base64str'))
       }
     ]
   }
