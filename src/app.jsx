@@ -12,7 +12,7 @@ function AppContainer({ children }) {
   );
 }
 
-function App() {
+export default function App() {
   const [location, setLocation] = useLocation();
 
   return (
@@ -91,5 +91,3 @@ function App() {
     </AppContainer>
   );
 }
-
-export default App;

@@ -112,77 +112,9 @@ export default function calcGegeratorPage() {
             <Box h={3} />
             {$NamespaceInput}
             <Box h={2} />
-            {/* {$test} */}
             {$Calculate}
             <Box h={2}/>
             {$Result}
         </VStack>
     );
 }
-
-// import { useMethods } from "react-use";
-// import {
-//     FormErrorMessage,
-//     FormLabel,
-//     FormControl,
-//     Input,
-//     Button,
-//     Radio,
-//     Stack,
-//     RadioGroup,
-//     Textarea,
-//     Box,
-//     Text,
-//     ButtonGroup,
-//     VStack,
-//     HStack,
-//     FormHelperText
-// } from "@chakra-ui/react";
-
-// export default function calcGegeratorPage() {
-//     // const[state,method] = useMethods(createMethods, initialState);
-
-//     const $TypeSelect = (
-//         <FormControl>
-//             <FormLabel>Type</FormLabel>
-//             <RadioGroup defaultValue='Itachi'>
-//                 <HStack spacing='24px'>
-//                     <Radio value='plus'>+</Radio>
-//                     <Radio value='minus'>-</Radio>
-//                     <Radio value='times'>x</Radio>
-//                     <Radio value='divide'>/</Radio>
-//                     <Radio value='mod'>%</Radio>
-//                 </HStack>
-//             </RadioGroup>
-//             <FormHelperText>Choose the type you want to calculate</FormHelperText>
-//         </FormControl>
-//     );
-//     const $NamespaceInput = (
-//         <FormControl>
-//             <FormLabel>Data</FormLabel>
-//             <Input placeholder='First data' size='md' id = "fir"/>
-//             <Input placeholder='Second data' size='md' id = "sec"/>
-//             <FormHelperText>Input the data you want to calculate</FormHelperText>
-//         </FormControl>
-//     );
-//     const $Result = (
-//         <FormControl>
-//             <FormLabel>Result</FormLabel>
-//             <Textarea
-//                 readOnly
-//                 value= "111"
-//                 sx={{ fontFamily: "mono" }}
-//             ></Textarea>
-//             <FormHelperText>That's the answer</FormHelperText>
-//         </FormControl>
-//     );
-//     return (
-//         <VStack align="flex-start">
-//             {$TypeSelect}
-//             <Box h={3} />
-//             {$NamespaceInput}
-//             <Box h={3} />
-//             {$Result}
-//         </VStack>
-//     );
-// }
