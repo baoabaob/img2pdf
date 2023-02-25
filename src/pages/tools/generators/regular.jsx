@@ -34,7 +34,7 @@ export default function () {
             if (regular === "") {
                 errorMess.innerText = "";
             } else {
-                errorMess.innerText = "Wrong Regular";
+                errorMess.innerText = "Wrong Regular Expression";
             }
         }
         setState({
