@@ -17,6 +17,10 @@ export const tools = [{
         name: 'Convert to HEX/DEC/OCT/BIN',
         key: 'baseConvert',
         component: lazy(() => import('./pages/tools/generators/baseConvert.jsx'))
+    },{
+        name: 'Regular Check',
+        key: 'regular',
+        component: lazy(()=>import('./pages/tools/generators/regular.jsx'))
     }]
 }]
 
