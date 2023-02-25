@@ -1,24 +1,10 @@
-import {useMethods} from "react-use";
 import React, {useState} from "react";
-import ReactDOM from "react-dom/client";
 import {
-    FormErrorMessage,
     FormLabel,
     FormControl,
     Input,
-    Button,
-    Radio,
-    Stack,
-    RadioGroup,
-    Textarea,
-    Box,
-    Text,
-    ButtonGroup,
     VStack,
-    HStack,
-    FormHelperText
 } from "@chakra-ui/react"
-import {number} from "prop-types";
 
 function getValue(numberStr, singleValue) {
     numberStr = numberStr.toLowerCase();

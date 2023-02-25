@@ -18,7 +18,7 @@ export const tools = [{
         key: 'baseConvert',
         component: lazy(() => import('./pages/tools/generators/baseConvert.jsx'))
     },{
-        name: 'Regular Check',
+        name: 'Regular Expression Check',
         key: 'regular',
         component: lazy(()=>import('./pages/tools/generators/regular.jsx'))
     }]
