@@ -22,7 +22,8 @@ job_1:
 
         - echo "deploy code"
         - rm -rf /home/gitlab-runner/www/*
-        - mv ./dist /home/gitlab-runner/www
+        - ls ./dist
+        # - mv ./dist /home/gitlab-runner/www
     tags: 
       - x86
 
