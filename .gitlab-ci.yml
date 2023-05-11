@@ -21,9 +21,10 @@ job_1:
         - npm run build
 
         - echo "deploy code"
-        - rm -rf /home/gitlab-runner/www/*
+        - rm -rf /home/gitlab-runner/www
         - ls ./dist
-        # - mv ./dist /home/gitlab-runner/www
+        - mkdir /home/gitlab-runner/www
+        - mv ./dist /home/gitlab-runner/www
     tags: 
       - x86
 
