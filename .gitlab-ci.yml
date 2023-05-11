@@ -14,6 +14,11 @@ cache:
 job_1:
     stage: deploy
     script:
+        - cd ~
+        - echo "git"
+        - git clone git@jihulab.com:OctopusWen/dev-tools.git
+        - cd ~/dev-tools
+
         - echo "install packages"
         - npm i --registry=http://registry.npm.taobao.org
         
