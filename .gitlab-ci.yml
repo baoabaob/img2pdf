@@ -45,6 +45,9 @@ job_2:
         - ls ./dist
         - mkdir /home/gitlab-runner/www
         - mv ./dist /home/gitlab-runner/www
+    artifacts:
+      paths:
+        - ./dist
     dependencies:
       - job_1
     tags: 
