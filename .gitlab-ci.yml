@@ -21,6 +21,13 @@ job_1:
         - echo "run build"
         - npm run build
 
+    artifacts:
+      paths:
+        - ./dist
+      untracked: false
+      when: on_success
+      expire_in: 30 days
+
     tags: 
       - x86_901
     # only:
@@ -28,12 +35,18 @@ job_1:
 
 job_2:
     stage: deploy
+
     script:
         - echo "deploy code"
         - rm -rf /home/gitlab-runner/www
         - ls ./dist
         - mkdir /home/gitlab-runner/www
         - mv ./dist /home/gitlab-runner/www
+    dependencies:
+      - job_1
+    artifacts:
+      paths:
+        - ./dist
     tags: 
       - x86_901
     only:
