@@ -11,9 +11,9 @@ cache:
   paths:
     - node_modules
 
-# workflow:
-#   rules:
-#     - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_PIPELINE_SOURCE == "push"'
 
 job_1:
     stage: build
@@ -45,9 +45,6 @@ job_2:
         - ls ./dist
         - mkdir /home/gitlab-runner/www
         - mv ./dist /home/gitlab-runner/www
-    artifacts:
-      paths:
-        - ./dist
     dependencies:
       - job_1
     tags: 
