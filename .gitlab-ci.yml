@@ -44,9 +44,6 @@ job_2:
         - mv ./dist /home/gitlab-runner/www
     dependencies:
       - job_1
-    artifacts:
-      paths:
-        - ./dist
     tags: 
       - x86_901
     only:
