@@ -11,9 +11,9 @@ cache:
   paths:
     - node_modules
 
-workflow:
-  rules:
-    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+# workflow:
+#   rules:
+#     - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
 
 job_1:
     stage: build
