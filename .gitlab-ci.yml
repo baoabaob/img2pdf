@@ -30,8 +30,8 @@ job_1:
 
     tags: 
       - x86_901
-    # only:
-    #   - master
+    only:
+      - merge_requests
 
 job_2:
     stage: deploy
@@ -48,6 +48,7 @@ job_2:
       - x86_901
     only:
       - master
+      - merge_requests
 
 
 
