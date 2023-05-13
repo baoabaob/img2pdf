@@ -1,6 +1,7 @@
 image: node:latest
 
 stages:
+  - build
   - deploy
 
 cache:
@@ -12,7 +13,7 @@ cache:
 
 
 job_1:
-    stage: deploy
+    stage: build
     script:
         - echo "install packages"
         - npm i --registry=http://registry.npm.taobao.org
@@ -20,6 +21,14 @@ job_1:
         - echo "run build"
         - npm run build
 
+    tags: 
+      - x86_901
+    # only:
+    #   - master
+
+job_2:
+    stage: deploy
+    script:
         - echo "deploy code"
         - rm -rf /home/gitlab-runner/www
         - ls ./dist
@@ -27,8 +36,9 @@ job_1:
         - mv ./dist /home/gitlab-runner/www
     tags: 
       - x86_901
-    # only:
-    #   - master
+    only:
+      - master
+
 
 
 # # This file is a template, and might need editing before it works on your project.
