@@ -35,16 +35,16 @@
 Git教程：https://www.liaoxuefeng.com/wiki/896043488029600/
 
 ## 2.Clone该项目，并安装依赖
-''' Bash
+``` Bash
 git clone https://jihulab.com/the-blueprint-project/devtoy.git
 cd devtoy
 npm install
-'''
+```
 
 ## 3.创建你的新分支，修改代码，并在本地调试运行
-''' Bash
+``` Bash
 npm run dev
-'''
+```
 
 ## 4.将代码推送到远程仓库，并发出pull request
 
