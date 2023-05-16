@@ -19,7 +19,13 @@ export const tools = [
       name: 'Base64 String Encoder/Decoder',
         key: 'base64str',
         component: lazy(() => import('./pages/tools/generators/base64str'))
-      }
+      },
+      /*
+      name: '你的工具的名字',
+        key: '你的工具的唯一的key',
+        component: lazy(() => import('./pages/tools/generators/你的工具的组件名'))
+      },
+      */
     ]
   }
 ]
