@@ -1,5 +1,5 @@
 # 这玩意是啥？
-如项目名字所言，这是一个前端框架的练手项目。该项目是一个常用开发工具的集合工具箱，我们将采用基于git的合作开发模式，共同开发更多工具，逐步充实该工具箱的功能。该项目旨在帮助大家快速熟悉React生态，初步掌握React前端开发的思路与方法。
+如项目名字所言，该项目是一个各类实用工具的集合“工具箱”。我们将采用基于git的合作开发模式，共同开发更多工具，逐步充实该工具箱的功能。该项目旨在帮助大家了解前端网页开发，快速熟悉React生态，初步掌握基于React的前端开发的思路与方法。
 
 # 在这个项目中，我可以做什么？
 一言以蔽之：
@@ -31,27 +31,64 @@
 
 （请跳转至文末的概念速通）
 
-# 参考开发步骤
-## 1.下载并配置好相关的环境
-相关软件与环境包括：Git、Node.js
+# 参考学习路线
+## 1.安装并配置好相关环境
+要点：Git的安装、Node.js环境的安装
 
 Git教程：https://www.liaoxuefeng.com/wiki/896043488029600/
 
-## 2.Clone该项目，并安装依赖
+## 2.Clone该项目，创建你的新分支
+要点：对Git概念的理解（分支、仓库、暂存区、commit、pull/push等）、Git本地/远程仓库的使用
+
+克隆仓库并进入仓库目录：
 ``` Bash
 git clone https://jihulab.com/the-blueprint-project/devtoy.git
 cd devtoy
+```
+
+创建并切换到你的分支：
+``` Bash
+git checkout -b your-branch-name
+```
+
+## 3.修改代码，并在本地调试运行
+要点：React/Vite等Node包的安装、HTML/CSS/JavaScript基础知识、React基础知识、Vite的使用
+
+在实现你自己的工具前，推荐先学习HTML/CSS/JavaScript基础和React基础。
+
+修改代码请参考后文的项目结构。
+
+在调试运行前，必须安装npm依赖包：
+``` Bash
 npm install
 ```
 
-## 3.创建你的新分支，修改代码，并在本地调试运行
+随后，你可以在本地运行项目：
 ``` Bash
 npm run dev
 ```
 
-## 4.将代码推送到远程仓库，并发出pull request
+## 4.将代码推送到远程仓库，并发出merge request
+要点：Git本地/远程仓库的使用
 
-之后我们会审核你的代码，只要编译没有问题，那么我们就会将其合并到主分支。我们配置的CI/CD会自动将其部署至服务器上，你可以在[这里](http://10.112.81.155)看到你最终的成果！
+首先将代码修改提交至本地仓库，别忘了一定提交到你自己的分支：
+``` Bash
+git checkout your-branch-name
+git add .
+git commit -m "Your commit message"
+```
+
+随后将你的分支推送到公共远程仓库：
+``` Bash
+git push origin your-branch-name
+```
+
+最后，在jihulab的网页界面，提交将你的分支合并到主分支的merge request：
+[New merge request](https://jihulab.com/OctopusWen/dev-tools/-/merge_requests/new)
+
+Source Branch选择你的分支，而Target Branch选择master分支。随后点击“Compare branches and continue”按钮，填写标题与描述，点击“Submit merge request”按钮即可。
+
+之后我们会审核你的代码，只要编译没有问题，那么我们就会将其合并到master主分支。我们配置的CI/CD会自动将其部署至服务器上，你可以在[这里](http://10.112.81.155)看到你最终的成果！
 
 # 项目技术概况
 ## 项目技术栈
@@ -117,6 +154,6 @@ Vite是一个前端构建工具，简单来说，它可以将我们编写React�
 
 它和create-react-app（React官方教程中即使用的该工具）属于同类工具。
 
-# 在本项目中，Wouter、CharkaUI 都是干啥的？
+# 在本项目中，Wouter、ChakraUI 都是干啥的？
 # React中，类组件和函数组件都是什么？Hook又是啥？
 （即将推出）
