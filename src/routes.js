@@ -23,7 +23,12 @@ export const tools = [{
         name: 'Regular Expression Check',
         key: 'regular',
         component: lazy(()=>import('./pages/tools/generators/regular.jsx'))
-    }]
+    },{
+        name: 'ImageToPDFConverter',
+        key: 'imageToPDF',
+        component: lazy(()=>import('./pages/tools/generators/ImageToPDFConverter.jsx'))
+    },
+    ]
 }]
 
 function generateRoutes(groups) {
