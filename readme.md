@@ -166,7 +166,3 @@ Python中有着很多的库，Node.js也有着库（Node.js中称之为“包”
 Vite是一个前端构建工具，简单来说，它可以将我们编写React组件的JavaScript代码，转换为浏览器可以直接解析的HTML、CSS和JavaScript代码，从而能够渲染出网页。
 
 它和create-react-app（React官方教程中即使用的该工具）属于同类工具。
-
-# 在本项目中，Wouter、ChakraUI 都是干啥的？
-# React中，类组件和函数组件都是什么？Hook又是啥？
-（即将推出）
