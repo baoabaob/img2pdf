@@ -1,7 +1,9 @@
 import {lazy} from 'react'
 
 export const tools = [{
-    name: 'Generators', key: 'generators', items: [{
+    name: 'Generators',
+    key: 'generators',
+    items: [{
         name: 'UUID / NanoID',
         key: 'uuid',
         component: lazy(() => import('./pages/tools/generators/uuid'))

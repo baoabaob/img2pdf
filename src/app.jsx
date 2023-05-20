@@ -2,8 +2,8 @@ import React, { Suspense } from "react";
 import { Link, Route, Switch, useLocation } from "wouter";
 import { LeftBar } from "./left-bar";
 import { tools, routes } from "./routes";
-import { VStack, HStack, Box, Heading } from "@chakra-ui/react";
-import { Divider } from "@chakra-ui/react";
+import { VStack, HStack, Box, Heading, Divider } from "@chakra-ui/react";
+
 function AppContainer({ children }) {
   return (
     <div className="w-screen h-screen">
@@ -12,9 +12,9 @@ function AppContainer({ children }) {
   );
 }
 
+
 export default function App() {
   const [location, setLocation] = useLocation();
-
   return (
     <Box w="100vw" h="100vh">
       <Box m="auto" maxWidth="1200px" h="100%">

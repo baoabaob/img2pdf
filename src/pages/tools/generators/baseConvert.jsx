@@ -32,7 +32,8 @@ export default function baseConvertPage() {
     });
     let errorMessBox = document.getElementsByClassName("errorMess");
 
-    const $HEX = (<FormControl>
+    const $HEX = (
+        <FormControl>
         <FormLabel>HEX</FormLabel>
         <div className="errorMess" style={{marginLeft: 10, marginBottom: 5}}></div>
         <Input placeholder='HEX'
@@ -134,7 +135,6 @@ export default function baseConvertPage() {
                    } else {
                        setState({HEX: '', DEC: '', OCT: '', BIN});
                        errorMessBox[3].innerText = "WrongInput";
-
                    }
                }}
         >
