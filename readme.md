@@ -35,7 +35,11 @@
 ## 1.安装并配置好相关环境
 要点：Git的安装、Node.js环境的安装
 
-Git教程：https://www.liaoxuefeng.com/wiki/896043488029600/
+Git教程：https://www.liaoxuefeng.com/wiki/896043488029600
+
+可视化学习Git: https://learngitbranching.js.org/?locale=zh_CN
+
+推荐书籍：《Pro Git》
 
 ## 2.Clone该项目，创建你的新分支
 要点：对Git概念的理解（分支、仓库、暂存区、commit、pull/push等）、Git本地/远程仓库的使用
@@ -55,6 +59,15 @@ git checkout -b your-branch-name
 要点：React/Vite等Node包的安装、HTML/CSS/JavaScript基础知识、React基础知识、Vite的使用
 
 在实现你自己的工具前，推荐先学习HTML/CSS/JavaScript基础和React基础。
+
+菜鸟教程快速入门：
+- https://www.runoob.com/html/html-tutorial.html
+- https://www.runoob.com/css/css-tutorial.html
+- https://www.runoob.com/js/js-tutorial.html
+
+React官方网站：https://react.dev/
+
+React中文教程：https://react.docschina.org/learn
 
 修改代码请参考后文的项目结构。
 
