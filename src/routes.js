@@ -27,7 +27,11 @@ export const tools = [{
         name: 'ImageToPDFConverter',
         key: 'imageToPDF',
         component: lazy(()=>import('./pages/tools/generators/ImageToPDFConverter.jsx'))
-    },
+    },{
+        name: 'PraiseMe',
+        key: 'praiseMe',
+        component: lazy(()=>import('./pages/tools/generators/PraiseMe.jsx'))
+    }
     ]
 }]
 
