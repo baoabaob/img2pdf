@@ -49,9 +49,9 @@ const App = () => {
         cv.convertScaleAbs(imgGray, imgContrast, alpha, beta);
 
         const imgSharpened = new cv.Mat();
-        const alpha = 1.5;
-        const beta = -0.5;
-        cv.addWeighted(imgGray, alpha, imgBlurred, beta, 0, imgSharpened, -1);
+        const sharpenAlpha = 1.5; // 锐化强度
+        const sharpenBeta = -0.5; // 与模糊图像权重的负值
+        cv.addWeighted(imgContrast, sharpenAlpha, imgBlurred, sharpenBeta, 0, imgSharpened, -1);
 
         cv.imshow(canvas, imgSharpened);
 
