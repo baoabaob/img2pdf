@@ -10,8 +10,8 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     accept: 'image/*',
-    onDrop: acceptedFiles => {
-      event.preventDefault();
+    onDrop: acceptedFiles(e) => {
+      e.preventDefault();
       setImages([...images, ...acceptedFiles.map(file => URL.createObjectURL(file))]);
     }
   });
