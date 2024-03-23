@@ -42,6 +42,12 @@ const App = () => {
         const sigma = 15
         cv.GaussianBlur(imgGray, imgBlurred, kernelSize, sigma, sigma, cv.BORDER_DEFAULT);
 
+        // 提高对比度
+        const imgContrast = new cv.Mat();
+        const alpha = 1.5; // 对比度因子，大于1时提高对比度
+        const beta = 0;    // 亮度增量，根据需要调整
+        cv.convertScaleAbs(imgGray, imgContrast, alpha, beta);
+
         const imgSharpened = new cv.Mat();
         const alpha = 1.5;
         const beta = -0.5;
@@ -52,6 +58,7 @@ const App = () => {
         img.delete();
         imgGray.delete();
         imgBlurred.delete();
+        imgContrast.delete();
         imgSharpened.delete();
 
         let processedSrc = canvas.toDataURL();
@@ -86,14 +93,17 @@ const App = () => {
           imgElement.onload = () => resolve();
         });
 
-        let canvas = await html2canvas(imgElement, { backgroundColor: null });
-        let imgData = canvas.toDataURL('image/png');
+        // 在使用html2canvas时提高scale值
+        let canvas = await html2canvas(imgElement, { backgroundColor: null, scale: 2 });
 
-        let imgWidth = 210;
+        // 根据图片的原始分辨率调整PDF中的图片大小
+        let imgData = canvas.toDataURL('image/png');
+        let imgWidth = canvas.width > doc.internal.pageSize.getWidth() ? doc.internal.pageSize.getWidth() : canvas.width / (canvas.width / doc.internal.pageSize.getWidth());
         let imgHeight = canvas.height * imgWidth / canvas.width;
 
-        // Add image to PDF
+        // Add image to PDF with adjusted size
         doc.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, '', 'FAST');
+
         if (i < images.length - 1) {
           doc.addPage();
         }
@@ -101,7 +111,20 @@ const App = () => {
         document.body.removeChild(imgElement);
       }
 
-      doc.save('download.pdf');
+      // 在保存前提示用户输入文件名
+      const defaultFileName = 'download.pdf'; // 默认文件名
+      let fileName = prompt("请输入文件名:", defaultFileName);
+      if (fileName) {
+        // 如果用户点击了"确定"并输入了文件名，则使用用户输入的文件名保存PDF
+        // 如果文件名不以.pdf结尾，自动添加
+        if (!fileName.endsWith('.pdf')) {
+          fileName += '.pdf';
+        }
+        doc.save(fileName);
+      } else {
+        // 如果用户点击了"取消"，则不保存文件
+        console.log("PDF下载被取消。");
+      }
     } catch (error) {
       console.error('PDF generation error:', error);
     } finally {
@@ -142,9 +165,6 @@ const App = () => {
           size="xl"
         />
       )}
-      <Box mt="auto" py={4} textAlign="center" color="gray.500">
-        Author: cccake
-      </Box>
     </VStack>
   );
 };
